@@ -65,16 +65,20 @@ export default class Animation {
     this._tl.to(selectors.container, { opacity: 1, id: 'container' });
 
     this._tl
-      .to(selectors.backWheel1, { opacity: 1, id: 'blackWheel1' })
-      .to(selectors.backWheel2, { opacity: 1, id: 'blackWheel2' }, '<')
-      .to(selectors.backWheelBack1, { opacity: 1, id: 'blackWheelBack1' }, '<')
-      .to(selectors.backWheelBack2, { opacity: 1, id: 'blackWheelBack2' }, '<');
+      .to(selectors.backWheel1, { opacity: 1, id: 'backWheel1' })
+      .to(selectors.backWheel2, { opacity: 1, id: 'backWheel2' }, '<')
+      .to(selectors.backWheelBack1, { opacity: 1, id: 'backWheelBack1' }, '<')
+      .to(selectors.backWheelBack2, { opacity: 1, id: 'backWheelBack2' }, '<');
 
     this._tl
       .to(selectors.frontGroup, { opacity: 1, id: 'frontGroup' })
       .to(selectors.frontWheel1, { opacity: 1, id: 'frontWheel1' }, '<')
       .to(selectors.frontWheel2, { opacity: 1, id: 'frontWheel2' }, '<')
-      .to(selectors.frontWheelsBack, { opacity: 1, id: 'frontWheelBack' }, '<');
+      .to(
+        selectors.frontWheelsBack,
+        { opacity: 1, id: 'frontWheelsBack' },
+        '<'
+      );
 
     this._tl.to(selectors.truck, {
       x: 500,
